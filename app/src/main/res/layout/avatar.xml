@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:paddingStart="50dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="20dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                >
+
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:text="T Shirts" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:text="Hoodies" />
+            </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+
+               <HorizontalScrollView
+                   android:id="@+id/GenderCstScrollView"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent">
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:orientation="horizontal"
+                       android:paddingStart="15dp"
+                       android:paddingTop="30dp"
+                       android:paddingEnd="25dp"
+                       android:paddingRight="2dp"
+                       android:paddingBottom="30dp">
+
+                       <androidx.cardview.widget.CardView
+                           android:id="@+id/card_view_MaleButton"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_margin="5dp"
+                           android:clickable="true"
+                           android:paddingStart="50dp"
+                           app:cardCornerRadius="25dp"
+                           app:cardElevation="20dp"
+                           app:cardUseCompatPadding="false">
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"
+                               android:layout_gravity="center"
+                               android:orientation="vertical"
+                               android:padding="10dp"
+
+                               >
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="DISOBEY"
+                                   android:textColor="@color/cardview_shadow_start_color"
+                                   android:textSize="20dp"
+                                   android:textStyle="bold"></TextView>
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="Male"
+                                   android:textColor="@color/black"
+                                   android:textSize="20dp"
+                                   android:textStyle="bold"></TextView>
+
+
+                               <ImageView
+                                   android:id="@+id/MaleButton"
+                                   android:layout_width="100dp"
+                                   android:layout_height="100dp"
+                                   android:layout_marginEnd="56dp"
+                                   android:background="#00FFFFFF"
+                                   android:contentDescription="@string/app_name"
+                                   android:scaleType="fitCenter"
+                                   app:srcCompat="@drawable/base" />
+
+                           </LinearLayout>
+
+
+                       </androidx.cardview.widget.CardView>
+
+
+                       <androidx.cardview.widget.CardView
+                           android:id="@+id/card_view_FemaleButton"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_margin="5dp"
+                           android:clickable="true"
+                           android:paddingStart="50dp"
+                           app:cardCornerRadius="25dp"
+                           app:cardElevation="20dp"
+                           app:cardUseCompatPadding="false">
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"
+                               android:layout_gravity="center"
+                               android:orientation="vertical"
+                               android:padding="10dp">
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="DISOBEY"
+                                   android:textColor="@color/cardview_shadow_start_color"
+                                   android:textSize="20dp"
+                                   android:textStyle="bold"></TextView>
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="Female"
+                                   android:textColor="@color/black"
+                                   android:textSize="20dp"
+                                   android:textStyle="bold"></TextView>
+
+
+                               <ImageView
+                                   android:id="@+id/FemaleButton"
+                                   android:layout_width="100dp"
+                                   android:layout_height="100dp"
+
+                                   android:layout_marginEnd="56dp"
+                                   android:background="#00FFFFFF"
+                                   android:contentDescription="@string/app_name"
+                                   android:scaleType="fitCenter"
+                                   app:srcCompat="@drawable/female_base_body" />
+
+                           </LinearLayout>
+
+
+                       </androidx.cardview.widget.CardView>
+
+                   </LinearLayout>
+               </HorizontalScrollView>
+           </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:paddingStart="50dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="20dp"
+                app:cardUseCompatPadding="false">
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+
+
+
