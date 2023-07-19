@@ -50,6 +50,12 @@ class MainActivity : AppCompatActivity() {
             }
 
 
+// Layouts in which all Customization controls are places
+// genderCstLayout : Gender selection Controlls
+// topCstLayout : Upper Garment Selection controlls
+// bottomCstLayout : bottom Garment Selection controlls
+// sneakerScrollView : Sneaker Selection controlls
+// AccessoriesCstLayout : Accessories Selection controlls
 
         val genderCstLayout = findViewById<LinearLayout>(R.id.GenderCstLayout)
         val topCstLayout = findViewById<LinearLayout>(R.id.TopCstLayout)
@@ -59,6 +65,8 @@ class MainActivity : AppCompatActivity() {
         val sneakerScrollView = findViewById<LinearLayout>(R.id.SneakerCstLayout)
 
 
+
+        //Sub sections for Gender selection
         val maleScrollView = findViewById<HorizontalScrollView>(R.id.MaleScrollView)
         val femaleScrollView = findViewById<HorizontalScrollView>(R.id.FemaleScrollView)
 
@@ -80,13 +88,18 @@ class MainActivity : AppCompatActivity() {
         val pantsSubSecButton = findViewById<Button>(R.id.PantsSubSecButton)
 
 
-        val hoodieButton1 = findViewById<CardView>(R.id.card_view_Top_Hoodie1)
 
+
+        //Cardviews for selecting Hoodies
+
+        val hoodieButton1 = findViewById<CardView>(R.id.card_view_Top_Hoodie1)
         val hoodieButton3 = findViewById<CardView>(R.id.card_view_Top_Hoodie3)
         val hoodieButton4 = findViewById<CardView>(R.id.card_view_Top_Hoodie4)
         val hoodieButton5 = findViewById<CardView>(R.id.card_view_Top_Hoodie5)
         val hoodieButton6 = findViewById<CardView>(R.id.card_view_Top_Hoodie6)
 
+
+        //Cardviews for selecting Tee Shirts
         val TeeButton1 = findViewById<CardView>(R.id.card_view_Top_Tee1)
         val TeeButton2 = findViewById<CardView>(R.id.card_view_Top_Tee2)
         val TeeButton3 = findViewById<CardView>(R.id.card_view_Top_Tee3)
@@ -98,7 +111,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
+        //Cardviews for selecting Pants
         val pab1 = findViewById<CardView>(R.id.card_view_Bottom1)
         val pab2 = findViewById<CardView>(R.id.card_view_Bottom2)
         val pab3 = findViewById<CardView>(R.id.card_view_Bottom3)
@@ -106,6 +119,7 @@ class MainActivity : AppCompatActivity() {
         val pab5 = findViewById<CardView>(R.id.card_view_Bottom5)
 
 
+        //Cardviews for selecting Sneakers
         val snb1 = findViewById<CardView>(R.id.card_view_Sneaker1)
         val snb2 = findViewById<CardView>(R.id.card_view_Sneaker2)
         val snb3 = findViewById<CardView>(R.id.card_view_Sneaker3)
@@ -119,10 +133,12 @@ class MainActivity : AppCompatActivity() {
         val snb11 = findViewById<CardView>(R.id.card_view_Sneaker11)
         val snb12 = findViewById<CardView>(R.id.card_view_Sneaker12)
 
+
+        //Cardviews for selecting Cap
         val cap1 = findViewById<CardView>(R.id.card_view_Cap1)
 
 
-
+        //Cardviews for selecting Female avatrs
         val femaleButton = findViewById<CardView>(R.id.card_view_FemaleButton)
         val femaleButton1 = findViewById<CardView>(R.id.card_view_FemaleButton1)
         val femaleButton2 = findViewById<CardView>(R.id.card_view_FemaleButton2)
@@ -130,6 +146,8 @@ class MainActivity : AppCompatActivity() {
         val femaleButton4 = findViewById<CardView>(R.id.card_view_FemaleButton4)
         val femaleButton5 = findViewById<CardView>(R.id.card_view_FemaleButton5)
         val femaleButton6 = findViewById<CardView>(R.id.card_view_FemaleButton6)
+
+        //Cardviews for selecting male avatrs
         val maleButton = findViewById<CardView>(R.id.card_view_MaleButton)
         val maleButton1 = findViewById<CardView>(R.id.card_view_MaleButton1)
         val maleButton2 = findViewById<CardView>(R.id.card_view_MaleButton2)
@@ -139,12 +157,15 @@ class MainActivity : AppCompatActivity() {
         val maleButton6 = findViewById<CardView>(R.id.card_view_MaleButton6)
 
 
+        //Layer customization Image buttons
         val genderCstButton = findViewById<ImageButton>(R.id.GenderCstButton)
         val tShirtCustomizeButton = findViewById<ImageButton>(R.id.TsCstButton)
         val pantsCusomizationButton = findViewById<ImageButton>(R.id.PaCstButton)
         val sneakerCusomizationButton = findViewById<ImageButton>(R.id.SnCstButton)
         val AccessoriesCusomizationButton = findViewById<ImageButton>(R.id.AccessoriesCstButton)
 
+
+        //Layer customization Image Views
         val avatarImage = findViewById<ImageView>(R.id.AvatarImageView)
         val torsoImage = findViewById<ImageView>(R.id.TopImageView)
         val pantImage = findViewById<ImageView>(R.id.BottomImageView)
@@ -158,6 +179,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        //Female Gender Cardeview Onclick Events
 
         femaleButton.setOnClickListener{
             avatarImage.setImageResource(R.drawable.female2)
@@ -185,6 +207,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        //male Gender Cardeview Onclick Events
         maleButton.setOnClickListener{
             avatarImage.setImageResource(R.drawable.base)
         }
@@ -209,7 +232,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+//Showing controls related to Layer selection button CLick events
 
+        //Showing Gender layer Controls
         genderCstButton.setOnClickListener{
             genderCstLayout.isVisible = true
             topCstLayout.isVisible= false
@@ -218,6 +243,7 @@ class MainActivity : AppCompatActivity() {
             AccessoriesCstLayout.isVisible = false
         }
 
+        //Showing Upper Garment layer Controls
         tShirtCustomizeButton.setOnClickListener{
             genderCstLayout.isVisible = false
             topCstLayout.isVisible = true
@@ -225,8 +251,9 @@ class MainActivity : AppCompatActivity() {
             sneakerScrollView.isVisible = false
             AccessoriesCstLayout.isVisible = false
         }
-        pantsCusomizationButton.setOnClickListener{
 
+        //Showing Bottom Garment layer Controls
+        pantsCusomizationButton.setOnClickListener{
             topCstLayout.isVisible = false
             genderCstLayout.isVisible = false
             bottomCstLayout.isVisible = true
@@ -234,8 +261,8 @@ class MainActivity : AppCompatActivity() {
             AccessoriesCstLayout.isVisible = false
         }
 
+        //Showing Sneaker layer Controls
         sneakerCusomizationButton.setOnClickListener{
-
             topCstLayout.isVisible = false
             genderCstLayout.isVisible = false
             bottomCstLayout.isVisible = false
@@ -243,8 +270,8 @@ class MainActivity : AppCompatActivity() {
             AccessoriesCstLayout.isVisible = false
         }
 
+        //Showing Accessories layer Controls
         AccessoriesCusomizationButton.setOnClickListener{
-
             topCstLayout.isVisible = false
             genderCstLayout.isVisible = false
             bottomCstLayout.isVisible = false
@@ -254,199 +281,181 @@ class MainActivity : AppCompatActivity() {
 
 
 
+//Showing and Hiding Subsections, on Click events
 
+        //Showing Male Subsection Controls
         maleSubSecButton.setOnClickListener{
             maleScrollView.isVisible = true
             femaleScrollView.isVisible = false
         }
 
+        //Showing Female Subsection Controls
         femaleSubSecButton.setOnClickListener{
             maleScrollView.isVisible = false
             femaleScrollView.isVisible = true
         }
 
 
-
+        //Showing Hoodies Subsection Controls
         hoodieSubSecButton.setOnClickListener{
             hoodieScrollView.isVisible = true
             teeShirtScrollView.isVisible = false
         }
 
+        //Showing Tee shirts Subsection Controls
         teeShirtSubSecButton.setOnClickListener{
             hoodieScrollView.isVisible = false
             teeShirtScrollView.isVisible = true
         }
 
 
+        //Showing Shorts Subsection Controls
         shortsSubSecButton.setOnClickListener{
             shortsScrollView.isVisible = true
             pantsScrollView.isVisible = false
         }
 
+        //Showing Pants Subsection Controls
         pantsSubSecButton.setOnClickListener{
             shortsScrollView.isVisible = false
             pantsScrollView.isVisible = true
         }
 
 
-
+//Hoodies Cardview On Click Events
         hoodieButton1.setOnClickListener {
-            // your code to perform when the user clicks on the button
-
             torsoImage.setImageResource( R.drawable.disobey_hoodie_white)
-
-            Log.d("Click", "Hoodie Button 1 On click")
-
         }
 
-
         hoodieButton3.setOnClickListener {
-            // your code to perform when the user clicks on the button
             torsoImage.setImageResource( R.drawable.disobey_hoodie_black)
         }
 
         hoodieButton4.setOnClickListener {
-            // your code to perform when the user clicks on the button
             torsoImage.setImageResource( R.drawable.beige)
         }
 
         hoodieButton5.setOnClickListener {
-            // your code to perform when the user clicks on the button
             torsoImage.setImageResource( R.drawable.orange)
         }
 
         hoodieButton6.setOnClickListener {
-            // your code to perform when the user clicks on the button
             torsoImage.setImageResource( R.drawable.thumbhole_hoodie_black)
         }
 
 
+
+//Tee Shirts Cardview On Click Events
+
         TeeButton1.setOnClickListener {
-            // your code to perform when the user clicks on the button
             torsoImage.setImageResource( R.drawable.tee_black)
         }
+
         TeeButton2.setOnClickListener {
-            // your code to perform when the user clicks on the button
             torsoImage.setImageResource( R.drawable.tee_purple)
         }
         TeeButton3.setOnClickListener {
-            // your code to perform when the user clicks on the button
             torsoImage.setImageResource( R.drawable.tee_white)
         }
 
         TeeButton4.setOnClickListener {
-            // your code to perform when the user clicks on the button
             torsoImage.setImageResource( R.drawable.duelist)
         }
+
         TeeButton5.setOnClickListener {
-            // your code to perform when the user clicks on the button
             torsoImage.setImageResource( R.drawable.controller)
         }
+
         TeeButton6.setOnClickListener {
-            // your code to perform when the user clicks on the button
             torsoImage.setImageResource( R.drawable.initiator)
         }
+
         TeeButton7.setOnClickListener {
-            // your code to perform when the user clicks on the button
             torsoImage.setImageResource( R.drawable.oversized_tee_sentinel)
         }
 
 
 
-
+//Pants Cardview On Click Events
         pab1.setOnClickListener {
-            // your code to perform when the user clicks on the button
             pantImage.setImageResource( R.drawable.maroon_half_pant)
         }
+
         pab2.setOnClickListener {
-            // your code to perform when the user clicks on the button
             pantImage.setImageResource( R.drawable.olive_green_half_pants)
         }
+
         pab3.setOnClickListener {
-            // your code to perform when the user clicks on the button
             pantImage.setImageResource( R.drawable.sc)
         }
+
         pab4.setOnClickListener {
-            // your code to perform when the user clicks on the button
             pantImage.setImageResource( R.drawable.avatar_customization)
         }
 
         pab5.setOnClickListener {
-            // your code to perform when the user clicks on the button
             pantImage.setImageResource( R.drawable.qw)
         }
 
-
-
+//Sneakers Cardview On Click Events
         snb1.setOnClickListener {
-            // your code to perform when the user clicks on the button
             SneakerImage.setImageResource( R.drawable.low_top_sneakers)
         }
+
         snb2.setOnClickListener {
-            // your code to perform when the user clicks on the button
             SneakerImage.setImageResource( R.drawable.high_top_sneakerss)
         }
 
         snb3.setOnClickListener {
-            // your code to perform when the user clicks on the button
             SneakerImage.setImageResource( R.drawable.purple_ghost)
         }
 
 
         snb4.setOnClickListener {
-            // your code to perform when the user clicks on the button
             SneakerImage.setImageResource( R.drawable.chroma_wave)
         }
 
         snb5.setOnClickListener {
-            // your code to perform when the user clicks on the button
             SneakerImage.setImageResource( R.drawable.frostbite_grape)
         }
 
         snb6.setOnClickListener {
-            // your code to perform when the user clicks on the button
             SneakerImage.setImageResource( R.drawable.tie_dye_treads)
         }
 
         snb7.setOnClickListener {
-            // your code to perform when the user clicks on the button
             SneakerImage.setImageResource( R.drawable.plum_noir)
         }
 
-
-
         snb9.setOnClickListener {
-            // your code to perform when the user clicks on the button
             SneakerImage.setImageResource( R.drawable.sunburst)
         }
 
         snb10.setOnClickListener {
-            // your code to perform when the user clicks on the button
             SneakerImage.setImageResource( R.drawable.darksmoke)
         }
 
         snb11.setOnClickListener {
-            // your code to perform when the user clicks on the button
             SneakerImage.setImageResource( R.drawable.clown_kickers)
         }
 
         snb12.setOnClickListener {
-
             SneakerImage.setImageResource( R.drawable.shark)
         }
 
-        cap1.setOnClickListener {
 
+
+//Cap Cardview On Click Events
+        cap1.setOnClickListener {
             AccessoriesImage.setImageResource( R.drawable.doodles_cap)
         }
-
-
-
-
 
     }
 
 
+
+
+    //Capture A bitmap image of the Customized Avatar from the Avatar Layout
     private fun getBitmapFromUiView(view: View?): Bitmap {
         //Define a bitmap with the same size as the view
         val returnedBitmap = Bitmap.createBitmap(view!!.width, view.height, Bitmap.Config.ARGB_8888)
